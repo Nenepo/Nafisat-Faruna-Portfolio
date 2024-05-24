@@ -21,6 +21,69 @@
   display: none;
 }
 
+@layer utilities {
+  .inline-start {
+    @apply inline-flex items-center justify-start;
+  }
+
+  .inline-center {
+    @apply inline-flex items-center justify-center;
+  }
+
+  .inline-end {
+    @apply inline-flex items-center justify-end;
+  }
+
+  .inline-between {
+    @apply inline-flex items-center justify-between;
+  }
+
+  .inline-evenly {
+    @apply inline-flex items-center justify-evenly;
+  }
+
+  .start {
+    @apply flex items-center justify-start;
+  }
+
+  .start-start {
+    @apply flex items-start justify-start;
+  }
+
+  .center {
+    @apply flex items-center justify-center;
+  }
+
+  .end {
+    @apply flex items-center justify-end;
+  }
+
+  .between {
+    @apply flex items-center justify-between flex-row;
+  }
+
+  .evenly {
+    @apply flex items-center justify-evenly;
+  }
+
+  /* Cols */
+  .col-start {
+    @apply flex flex-col items-start justify-center;
+  }
+
+  .col-center {
+    @apply flex flex-col items-center justify-center;
+  }
+
+  .col-end {
+    @apply flex flex-col items-end justify-center;
+  }
+
+  .col-between {
+    @apply flex flex-col items-start justify-between;
+  }
+}
+/* 
 .rotate-45 {
   @apply rotate-[45deg];
 }
@@ -83,4 +146,4 @@
 
 .-rotate-360 {
   @apply rotate-[-360deg];
-}
+} */
