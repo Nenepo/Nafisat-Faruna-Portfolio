@@ -4,7 +4,6 @@ import { useState } from "react";
 import { useLocation } from "react-router-dom";
 import { navigation } from "../index";
 import Button from "./Button";
-import MenuSvg from "../../assets/svg/MenuSvg";
 import TextAnimation from "./TextAnimation";
 import gsap from "gsap";
 
@@ -40,8 +39,12 @@ function Header() {
           <a id="leftDiv" href="#hero" className="md:translate-x-[-10%] md:mt[-4%]" >
             <h3 className="text-lg font-[500] uppercase text-n-1">Nafisat Faruna</h3>
           </a>
-          <div id="rightDiv" className="cursor-pointer  z-20 md:hidden" onClick={toggleNavigation}>
-            <MenuSvg openNavigation={openNavigation} />
+          <div id="rightDiv" className="cursor-pointer space-y-1 md:hidden" onClick={toggleNavigation}>
+
+            <div
+              className={` w-4 h-[2px] transition-transform duration-300  bg-white ${openNavigation ? 'transform rotate-45 translate-y-[2px]' : ''}`}
+            />
+            <div className={`w-4 h-[2px] bg-white transition-transform duration-300 ${openNavigation ? '-rotate-45 -translate-y-1' : ''}`} />
           </div>
         </div>
 
@@ -52,9 +55,9 @@ function Header() {
             {navigation.map((item, index) => (
               <div className="parent overflow-hidden" key={index}>
                 <Link
-                 
+
                   key={item.id}
-                 to={item.url}
+                  to={item.url}
                   onClick={() => setOpenNavigation(false)
 
                   }

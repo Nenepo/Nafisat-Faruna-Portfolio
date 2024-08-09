@@ -106,7 +106,7 @@ const Hero = () => {
         </div>
         <div
           ref={imageRef}
-          className="lg:w-[512px] w-[45%] h-[60%] md:h-[428px] mt-28 shadow image relative  overflow-hidden rounded-3xl"
+          className="lg:w-[512px] w-[45%] h-[60%] md:h-[428px] mt-20 shadow image relative  overflow-hidden rounded-3xl"
         >
           <img
             className="w-full h-full object-cover object-center align-middle"
