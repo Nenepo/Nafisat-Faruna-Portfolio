@@ -10,7 +10,7 @@ const MenuSvg = ({ openNavigation }) => {
         className="transition-all origin-center"
         y={openNavigation ? "5" : "0"}
         width="20"
-        height="2"
+        height="4"
         rx="1"
         fill="#fff"
         transform={`rotate(${openNavigation ? "45" : "0"})`}
@@ -19,7 +19,7 @@ const MenuSvg = ({ openNavigation }) => {
         className="transition-all origin-center"
         y={openNavigation ? "5" : "10"}
         width="20"
-        height="2"
+        height="4"
         rx="1"
         fill="#fff"
         transform={`rotate(${openNavigation ? "-45" : "0"}) `}
