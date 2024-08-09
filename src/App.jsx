@@ -1,17 +1,20 @@
-
-// import Header from "./components/Header"
-import Hero from "./components/Hero"
-
+import { Routes, Route } from "react-router-dom";
+import Header from "./components/Header"
+import Home from './pages/Home'
+import Work from './pages/Work'
 function App() {
  
 
   return (
     <>
-    <body className=" bg-n-2 font-inter main " >
-      {/* <Header /> */}
-      <Hero/>
-      
-    </body>
+    <section className=" bg-n-2 font-inter main " >
+      <Header />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/work" element={<Work />} />
+       
+      </Routes>
+    </section>
     
     </>
   )

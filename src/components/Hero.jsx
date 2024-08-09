@@ -1,9 +1,4 @@
-import Button from './Button';
-import { experience, steps } from '..';
-import Section from './Section';
-
-import { FaLinkedin, FaXTwitter } from "react-icons/fa6";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useLayoutEffect } from "react";
 import { gsap } from "gsap/dist/gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
@@ -11,220 +6,116 @@ gsap.registerPlugin(ScrollTrigger);
 
 const Hero = () => {
   const headerTextRef = useRef(null);
-  const anchor = useRef(null);
   const imageRef = useRef(null);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     const headerText = headerTextRef.current;
-    // const image = document.querySelector(".Image");
+    const image = imageRef.current;
 
-    console.log(headerText);
-
-    gsap.to(headerText, {
+    const headerAnimation = gsap.to(headerText, {
       scrollTrigger: {
         trigger: headerText,
-        start: "top 10%",
-        // end: "",
+        start: "top 20%",
         pin: true,
         pinSpacer: false,
-        markers: true,
+        // markers: true,
         scrub: true,
       },
-
       opacity: 0,
-      scale: 0.8,
+      scale: 0.5,
       ease: "none",
     });
+    const imageAnimation = gsap.to(image, {
+      scrollTrigger: {
+        trigger: image,
+        start: "top 60%", // when the top of the image hits the bottom of the viewport
+
+        scrub: true,
+        // markers: true,
+        pinSpacer: false,
+
+      },
+
+      ease: "power1.out",
+      scale: 1.5
+    });
     
-    // const heroText = headerTextRef.current;
-    // // console.log(anchor)
+    return () => {
+      // Clean up the animation and ScrollTrigger instances
 
-    // gsap.to(heroText, {
-    //   scrollTrigger: {
-    //     trigger: anchor.current,
-    //     start: "top top",
-    //     // end: "bottom 10%",
-    //     scrub: true,
-    //     pin: heroText,
-    //     pinSpacing: false,
-    //     markers: true,
-    //     // pinType: "fixed",
-    //   },
-    //   // opacity: 0,
-    // });
+      imageAnimation.kill();
+      headerAnimation.kill();
+      ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+    };
   }, []);
+  useEffect(() => {
+    const text1 = headerTextRef.current.querySelector('.text1');
+    const text2 = headerTextRef.current.querySelector('.text2');
+    const text3 = headerTextRef.current.querySelector('.text3');
+    const smallText1 = headerTextRef.current.querySelector('.sText-1');
+    const smallText2 = headerTextRef.current.querySelector('.sText-2');
 
-  // useEffect(() => {
-  //   const hero = document.getElementById('hero').offsetHeight
-  //   const imgHeight = document.querySelector('.image').offsetHeight
-  //   const headerText = headerTextRef.current;
-  //   const image = imageRef.current;
-
-  //   gsap.to(headerText, {
-  //     scrollTrigger: {
-  //       trigger: headerText,
-  //       start: 'top 10%',
-  //       markers: true,
-  //       pin: true,
-  //       pinSpacer: false,
-  //       scrub: true
-  //     },
-  //      opacity: 0.5,
-  //      delay: 2
-  //   })
-  // //  const textAnimation = gsap.to(headerText,{
-  // //   scrollTrigger:{
-  // //     trigger: headerText,
-  // //     start: '+=30%',
-  // //     end: `+=${imgHeight}`,
-  // //     scrub: true,
-  // //     pin: true,
-  // //     markers: true
-  // //     // toggleActions: 'play reverse play reverse',
-
-  // //   }
-  // //  })
-  // //  console.log('animation')
-  //     // textAnimation.to(headerText, {
-
-  //     //    scale: 0.5,
-  //     //    opacity: 0,
-  //     //    perspective: 1200
-  //     //   }
-  //     // );
-
-  //     // gsap.to(image,
-  //     //   {
-  //     //     y: -100,
-  //     //     perspective: 1200,
-
-  //     //     scrollTrigger: {
-  //     //       trigger: image,
-  //     //       start: 'top bottom',
-  //     //       end: `+=${hero}`,
-  //     //       scrub: true,
-
-  //     //     },
-  //     //   }
-  //     // );
-  //     // gsap.to(image,
-  //     //   {
-  //     //     scale: 1.2,
-  //     //     scrollTrigger: {
-  //     //       trigger: image,
-  //     //       start: 'top bottom',
-  //     //       end: `+=${hero}`,
-  //     //       scrub: true,
-  //     //       onEnter: () => gsap.to(image, {scale: 1}),
-  //     //       onLeaveBack: () => gsap.to(image, {scale: 1.2}),
-  //     //     },
-  //     //   }
-  //     // );
-
-  // }, []);
-
+    const textAnimation = gsap.timeline({
+      defaults: {
+        duration: 1,
+        stagger: 0.1,
+        opacity: 0,
+        // y: 0,
+        ease: 'power3.out'
+      }
+    })
+    textAnimation.from(text1, {
+      y: 100
+    });
+    textAnimation.from(text2, { y: 100 }, "-=0.5");
+    textAnimation.from(text3, { y: 100 }, "-=0.5");
+   
+    gsap.from(smallText1, {
+      x: -100,
+      delay: 2,
+      opacity: 0
+    })
+    gsap.from(smallText2, {
+      x: 100,
+      delay: 2,
+      opacity: 0
+    })
+  }, [])
   return (
-    <>
-      <Section id="hero" className="container mx-auto">
-        <div className="flex flex-col items-center justify-center h-full mt-[20%] container">
-          <div className="header-txt" ref={headerTextRef}>
-            <h1 className="text-n-1 flex flex-col -space-y-4 items-center justify-center text-5xl font-bold uppercase tracking-[-100%] z-20 md:text-7xl lg:text-[120px]">
-              <span className="tracking-[-12px]">React</span>
-              <span className="tracking-[-12px]">Front-end</span>
-              <span className="tracking-[-12px]">Developer&copy;</span>
-            </h1>
-
-            <div className="text-n-1 flex flex-col items-center mt-2 space-y-2 justify-center font-semibold md:items-stretch md:flex-row md:justify-between md:space-x-10 lg:space-x-24">
-              <h5 className="flex text-center uppercase flex-col md:text-left">
-                Currently crafting <span className="mt-[-8px]"> experiences from my bed 😁</span>
-              </h5>
-              <h5 className="">{`(2022 - Present)`}</h5>
+    <section id="hero" className="container mx-auto w-full relative py-10 bg-n-2 px-6 lg:px-32 lg:py-20">
+      <div className="flex flex-col items-center justify-center h-full mt-[20%] container">
+        {/* fix header animation */}
+        <div className="header-txt" ref={headerTextRef}>
+          <h1 className="text-n-1 overflow-hidden flex flex-col -space-y-1.5 items-center justify-center text-5xl font-semibold uppercase z-20 md:text-7xl lg:text-[120px] " >
+            <div className="overflow-hidden  h-30 block">
+              <span className="tracking-[-4px] block text1">React</span>
             </div>
-          </div>
-
-          <div
-            ref={imageRef}
-            className="lg:w-[512px] h-[728px] mt-12 shadow image relative z-50 overflow-hidden rounded-[10%]"
-          >
-            <img
-              className="w-full h-full object-cover object-center"
-              src="../src/assets/profilePic.jpg"
-              alt="Nafisa Faruna's Picture"
-            />
-          </div>
-        </div>
-        <div>
-          <h1>I love making cool things and solving complex problems for people — like you.</h1>
-          <h1>I deliver impactful results through strategic thinking and data-driven insights.</h1>
-        </div>
-        <div>
-          <img src="" alt="" />
-        </div>
-        <div>
-          <h1>My tried-and-true coding process</h1>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-            {steps.map((step, index) => (
-              <div key={index}>
-                <p className="font-semibold">{`(${step.index})`}</p>
-                <h1 className="font-bold">{step.title}</h1>
-                <p className="font-semibold text-neutral-600">{step.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-        <div id="work">
-          <h1>Relevant Experience</h1>
-          {experience.map((item, index) => (
-            <div key={index}>
-              <h1>{item.companyTitle}</h1>
-              <h2>{item.position}</h2>
-              <p>{item.date}</p>
-              <p>{item.workDone}</p>
+            <div className="overflow-hidden  h-30  block">
+              <span className="tracking-[-4px] block  text2">Front-end</span>
             </div>
-          ))}
-          <div className="flex justify-start">
-            <button className="bg-n-1 text-n-2 outline-none border-none rounded-full px-4 py-4 hover:bg-neutral-600">
-              View work
-            </button>
-            <button className="bg-n-2 text-n-1 font-semibold border-1 border-n-1 outline-none border-none rounded-full px-4 py- hover:text-neutral-600 hover:border-neutral-600">
-              view resume
-            </button>
+            <div className="overflow-hidden  block">
+              <span className="tracking-[-4px] text3 block">Developer&copy;</span>
+            </div>
+          </h1>
+          <div className="text-n-1 flex flex-col items-center mt-2 space-y-2 justify-center font-semibold md:items-stretch md:flex-row md:justify-between md:space-x-10 lg:space-x-24">
+            <h5 className="flex text-center uppercase flex-col text-[0.8rem] md:text-left sText-1">
+              Currently crafting <span className="mt-[-8px]"> experiences from my bed 😁</span>
+            </h5>
+            <h5 className="text-[0.8rem] sText-2">{`(2022 - Present)`}</h5>
           </div>
         </div>
-        <footer className="bg-n-2">
-          <h4 className="text-n-1 font-semibold">
-            Think I'd be a good fit for your team or project? Let's connect.
-          </h4>
-          <Button
-            href="mailto:nafisafaruna@gmail.com"
-            text="nafisafaruna@gmail.com"
-            className={`text-sm transition-colors hover:bg-n-1/60 font-[500]`}
-          ></Button>
-          <div>
-            <h2>SELECTED PROJECTS</h2>
-            <a href="#">Crosby: POS Tool Launch</a>
-            <a href="#"></a>
-            <a href="#"></a>
-            <a href="#"></a>
-          </div>
-          <div>
-            <FaLinkedin /> <a> Linkedin</a>
-            <a>
-              {" "}
-              <FaXTwitter />X{"(Twitter)"}
-            </a>
-          </div>
-          <div>
-            <h4>Nafisat Faruna</h4>
-            <p>
-              React developer but to be honest being a developer is about adapting to the frame
-              works as far as you have a good foundational earning
-            </p>
-            <img src="../src/assets/black woman.jpg" alt="" />
-          </div>
-        </footer>
-      </Section>
-    </>
+        <div
+          ref={imageRef}
+          className="lg:w-[512px] w-[45%] h-[60%] md:h-[428px] mt-28 shadow image relative  overflow-hidden rounded-3xl"
+        >
+          <img
+            className="w-full h-full object-cover object-center align-middle"
+            src="/assets/profilePic.jpg"
+            alt="Nafisa Faruna's Picture"
+          />
+        </div>
+      </div>
+    </section>
   );
 };
 

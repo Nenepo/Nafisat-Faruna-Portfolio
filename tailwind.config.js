@@ -16,6 +16,9 @@ export default {
         n: {
           1: "#FFFFFF",
           2: "#1A1A1A",
+          3: "#000000",
+          btnGrey:'#CCCCCC',
+          textGrey:"#878787"
           
          
         },
