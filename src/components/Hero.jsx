@@ -110,7 +110,7 @@ const Hero = () => {
         >
           <img
             className="w-full h-full object-cover object-center align-middle"
-            src="/assets/profilePic.jpg"
+            src="../../assets/profilePic.jpg"
             alt="Nafisa Faruna's Picture"
           />
         </div>
