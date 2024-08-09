@@ -4,7 +4,7 @@ import { useState } from "react";
 import { useLocation } from "react-router-dom";
 import { navigation } from "../index";
 import Button from "./Button";
-import MenuSvg from "../assets/svg/MenuSvg";
+import MenuSvg from "../../assets/svg/MenuSvg";
 import TextAnimation from "./TextAnimation";
 import gsap from "gsap";
 
