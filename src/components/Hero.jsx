@@ -57,7 +57,7 @@ const Hero = () => {
 
     const textAnimation = gsap.timeline({
       defaults: {
-        duration: 1,
+        duration: 0.8,
         stagger: 0.1,
         opacity: 0,
         // y: 0,
@@ -72,12 +72,12 @@ const Hero = () => {
    
     gsap.from(smallText1, {
       x: -100,
-      delay: 2,
+      delay: 1,
       opacity: 0
     })
     gsap.from(smallText2, {
       x: 100,
-      delay: 2,
+      delay: 1,
       opacity: 0
     })
   }, [])
