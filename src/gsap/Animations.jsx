@@ -2,16 +2,9 @@
 
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import {  useEffect, useRef } from "react";
 
 
 gsap.registerPlugin(ScrollTrigger);
-
-
-
-
- 
-
   export const animateAboutText1 = (element) => {
     gsap.fromTo(element, { opacity: 0, y: 20 }, {
       scrollTrigger: {
@@ -47,7 +40,6 @@ gsap.registerPlugin(ScrollTrigger);
       scrollTrigger: {
         trigger: element,
         start: "bottom 90%",
-        markers: true,
       },
       y: 0,
       opacity: 1,
