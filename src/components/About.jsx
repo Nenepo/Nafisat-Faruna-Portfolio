@@ -10,10 +10,10 @@ function About() {
   })
   return (
     <div id="about" className="space-y-20 px-6 lg:px-32  w-full mx-auto md:w-[80%]">
-    <h1 className="about-text1 text-n-1 font-semibold text-3xl md:text-4xl text-center">
+    <h1 className="about-text1 text-n-2 dark:text-n-1 font-semibold text-3xl md:text-4xl text-center">
       I love making cool things and solving complex problems for people — like you.
     </h1>
-    <h1 className="about-text2 text-n-1 font-semibold text-3xl md:text-4xl text-center">
+    <h1 className="about-text2 text-n-2 dark:text-n-1 font-semibold text-3xl md:text-4xl text-center">
       I deliver impactful results through strategic thinking and data-driven insights.
     </h1>
   </div>

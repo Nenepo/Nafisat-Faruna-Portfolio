@@ -16,14 +16,14 @@ function Process() {
       <img src="/assets/coding-bed.jpg" alt="workspace for now" className="w-full h-full object-cover object-center align-middle" />
     </div>
     <div className="overflow-hidden  h-30 block">
-      <h1 className="text-n-1  block w-full font-semibold mt-20 text-3xl md:text-4xl text-left md:w-[60%] mb-16 process-text ">My tried-and-true coding process</h1>
+      <h1 className="text-n-2 dark:text-n-1  block w-full font-semibold mt-20 text-3xl md:text-4xl text-left md:w-[60%] mb-16 process-text ">My tried-and-true coding process</h1>
     </div>
 
     <div className="grid gap-x-4 gap-y-14 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 process-list">
       {steps.map((step, index) => (
         <div key={index}>
-          <p className="font-semibold text-white text-sm mb-2">{`(0${index + 1})`}</p>
-          <h1 className="font-semibold text-white text-3xl mb-4">{step.title}</h1>
+          <p className="font-semibold text-n-2 dark:text-n-1 text-sm mb-2">{`(0${index + 1})`}</p>
+          <h1 className="font-semibold text-n-2 dark:text-n-1 text-3xl mb-4">{step.title}</h1>
           <p className="font-semibold text-gray-500">{step.description}</p>
         </div>
       ))}

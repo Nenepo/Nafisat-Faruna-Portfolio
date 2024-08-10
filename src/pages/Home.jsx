@@ -7,7 +7,7 @@ function Home() {
 
   return (
     <>
-    <section className=" bg-n-2 font-inter main " >
+    <section className=" font-inter main " >
      
       <Hero/>
       <Section />

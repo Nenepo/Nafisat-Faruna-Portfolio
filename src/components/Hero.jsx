@@ -82,11 +82,11 @@ const Hero = () => {
     })
   }, [])
   return (
-    <section id="hero" className="container mx-auto w-full relative py-10 bg-n-2 px-6 lg:px-32 lg:py-20">
+    <section id="hero" className="container mx-auto w-full relative py-10 px-6 lg:px-32 lg:py-20">
       <div className="flex flex-col items-center justify-center h-full mt-[20%] container">
         {/* fix header animation */}
         <div className="header-txt" ref={headerTextRef}>
-          <h1 className="text-n-1 overflow-hidden flex flex-col -space-y-1.5 items-center justify-center text-5xl font-semibold uppercase z-20 md:text-7xl lg:text-[120px] " >
+          <h1 className=" overflow-hidden flex flex-col -space-y-1.5 items-center justify-center text-5xl font-semibold uppercase z-20 md:text-7xl lg:text-[120px]  text-n-2 dark:text-n-1" >
             <div className="overflow-hidden  h-30 block">
               <span className="tracking-[-4px] block text1">React</span>
             </div>
@@ -97,7 +97,7 @@ const Hero = () => {
               <span className="tracking-[-4px] text3 block">Developer&copy;</span>
             </div>
           </h1>
-          <div className="text-n-1 flex flex-col items-center mt-2 space-y-2 justify-center font-semibold md:items-stretch md:flex-row md:justify-between md:space-x-10 lg:space-x-24">
+          <div className=" flex flex-col items-center mt-2 space-y-2 justify-center font-semibold md:items-stretch md:flex-row md:justify-between md:space-x-10 lg:space-x-24  text-n-2 dark:text-n-1">
             <h5 className="flex text-center uppercase flex-col text-[0.8rem] md:text-left sText-1">
               Currently crafting <span className="mt-[-8px]"> experiences from my bed 😁</span>
             </h5>

@@ -55,7 +55,7 @@ function Footer() {
 
         </div>
       </div>
-      <div className="mx-auto   w-[50%]">
+      <div className="md:mx-auto md:w-[50%]">
         <h4 className="text-n-1 font-semibold uppercase">Nafisat Faruna</h4>
         <p className="text-n-textGrey">
           React developer but to be honest being a developer is about adapting to the frameworks as far as you have a good foundational earning

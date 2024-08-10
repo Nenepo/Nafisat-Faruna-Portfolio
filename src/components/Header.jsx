@@ -36,20 +36,20 @@ function Header() {
       <div className="md:px-5 md:items-center md:flex md:justify-between">
         {/* transition x open navigation = true */}
         <div id="mobile-nav" className="flex justify-between items-center px-5">
-          <a id="leftDiv" href="#hero" className="md:translate-x-[-10%] md:mt[-4%]" >
-            <h3 className="text-lg font-[500] uppercase text-n-1">Nafisat Faruna</h3>
+          <a id="leftDiv" href="#hero" className="md:translate-x-[-10%] md:mt[-4%] text-n-2 dark:text-n-1" >
+            <h3 className="text-lg font-[500] uppercase ">Nafisat Faruna</h3>
           </a>
           <div id="rightDiv" className="cursor-pointer space-y-1 md:hidden" onClick={toggleNavigation}>
 
             <div
-              className={` w-4 h-[2px] transition-transform duration-300  bg-white ${openNavigation ? 'transform rotate-45 translate-y-[2px]' : ''}`}
+              className={` w-4 h-[2px] transition-transform duration-300 bg-n-2 dark:bg-n-1  ${openNavigation ? 'transform rotate-45 translate-y-[2px]' : ''}`}
             />
-            <div className={`w-4 h-[2px] bg-white transition-transform duration-300 ${openNavigation ? '-rotate-45 -translate-y-1' : ''}`} />
+            <div className={`w-4 h-[2px] transition-transform duration-300 bg-n-2 dark:bg-n-1 ${openNavigation ? '-rotate-45 -translate-y-1' : ''}`} />
           </div>
         </div>
 
         {/* text transition */}
-        <div id="navigation" className={`${openNavigation ? 'flex' : 'hidden'} flex-col h-[100vh] items-center bg-n-2 w-full  pt-20 space-y-10 md:pt-0 md:flex-row md:translate-y-0 md:h-10 md:bg-inherit md:flex md:justify-between md:space-y-0 md:w-[80%]`}>
+        <div id="navigation" className={`${openNavigation ? 'flex' : 'hidden'} flex-col h-[100vh] items-center  w-full  pt-20 space-y-10 md:pt-0 md:flex-row md:translate-y-0 md:h-10 md:bg-inherit md:flex md:justify-between md:space-y-0 md:w-[80%]`}>
           <TextAnimation openNavigation={openNavigation} />
           <nav id="intro" className=" mx-auto md:mx-0 md:flex md:gap-4  ">
             {navigation.map((item, index) => (
@@ -61,8 +61,8 @@ function Header() {
                   onClick={() => setOpenNavigation(false)
 
                   }
-                  className={`line relative uppercase block text-[3rem] font-[500] md:text-lg font-poppins text-n-1 transition-all tracking-tighter border-opacity-0 
-               border-n-1 border-b-4 hover:border-opacity-100  ${item.url === pathname.hash ? "" : ""}  `}
+                  className={`line relative uppercase block text-[3rem] font-[500] md:text-lg font-poppins transition-all tracking-tighter border-opacity-0 text-n-2 dark:text-n-1  hover:border-n-2 dark:hover:border-n-1
+                hover:border-b-4 hover:border-opacity-100  ${item.url === pathname.hash ? "" : ""}  `}
                 >
                   {item.title}
                 </Link>
@@ -74,9 +74,9 @@ function Header() {
           {/* transitions up */}
           <div id="text" className="space-y-4 text-center md:items-center md:space-y-0 md:flex md:space-x-4">
             <div className="bg-n-1/30 w-[100%] h-[1px] mx-auto md:hidden "></div>
-            <p className="uppercase text-n-1 font-[500] ">Let's Connect</p>
+            <p className="uppercase  font-[500] text-n-2 dark:text-n-1">Let's Connect</p>
             {/* add an icon */}
-            <Button href="mailto:nafisafaruna@gmail.com" text="nafisafaruna@gmail.com" className={`text-sm transition-colors hover:bg-n-1/60 font-[500]`}></Button>
+            <Button href="mailto:nafisafaruna@gmail.com" text="nafisafaruna@gmail.com" className={`text-sm text-n-1 dark:text-n-2  bg-n-2 dark:bg-n-1 hover:bg-n-1/60 font-[500]`}></Button>
           </div>
 
         </div>
