@@ -4,12 +4,23 @@ import { animateProcessText, animateProcessList } from '../gsap/Animations';
 function Process() {
 
   useEffect(() => {
-    const processText = document.querySelector('.process-text');
-    const processList = document.querySelector('.process-list');
-
-    animateProcessText(processText);
-    animateProcessList(processList, processText);
-  }, [])
+    const handleLoad = () => {
+      const processText = document.querySelector('.process-text');
+      const processList = document.querySelector('.process-list');
+  
+      animateProcessText(processText);
+      animateProcessList(processList, processText);
+    };
+  
+    if (typeof window !== 'undefined') {
+      window.addEventListener('load', handleLoad);
+    }
+  
+    return () => {
+      window.removeEventListener('load', handleLoad);
+    };
+  }, []);
+  
   return (
     <div className="mt-10  px-6 lg:px-32">
       <div className="lg:w-[70%] w-[60%] h-[40%] md:h-[60%] mt-28 shadow image relative  z-10 overflow-hidden rounded-3xl mx-auto">

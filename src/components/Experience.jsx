@@ -1,4 +1,3 @@
-import Button from './Button';
 import { experience } from '..';
 import { useEffect, useRef } from 'react';
 import { animateRelevantExperience } from '../gsap/Animations';
@@ -14,8 +13,25 @@ function Experience() {
     animateRelevantExperience(relevantText, experienceText, workList, relevantExperienceText);
   }, [])
 
+  useEffect(() => {
+    const handleLoad = () => {
+      const relevantText = document.querySelector('.relevant-text');
+      const experienceText = document.querySelector('.experience-text');
+      const workList = document.querySelector('.work-list');
+      const relevantExperienceText = relevantExperienceRef.current;
 
- 
+      animateRelevantExperience(relevantText, experienceText, workList, relevantExperienceText);
+    };
+
+    if (typeof window !== 'undefined') {
+      window.addEventListener('load', handleLoad);
+    }
+
+    return () => {
+      window.removeEventListener('load', handleLoad);
+    };
+  }, []);
+
   return (
     <div>
       <div id="work" className="mt-28 pb-20">
@@ -42,9 +58,9 @@ function Experience() {
         </div>
         {/* add animation */}
         <div className="flex justify-start mt-14 space-x-2  px-6 lg:px-32">
-          <a href={"/work"}  className="dark:bg-n-1  bg-n-2  text-n-1  dark:text-n-2 px-6 py-6 cursor-pointer relative inline-flex items-center justify-center outline-none font-semibold border-none h-6 rounded-full uppercase hover:text-n-1/70 dark:hover:text-n-2/40  ">View more</a>
-           
-      
+          <a href={"/work"} className="dark:bg-n-1  bg-n-2  text-n-1  dark:text-n-2 px-6 py-6 cursor-pointer relative inline-flex items-center justify-center outline-none font-semibold border-none h-6 rounded-full uppercase hover:text-n-1/70 dark:hover:text-n-2/40  ">View more</a>
+
+
           {/* links to a google drive resume  */}
           <a href='#' className=" bg-n-1 dark:bg-n-2 text-n-2 dark:text-n-1 font-semibold border-2 dark:border-n-1/60  outline-none  uppercase hover:text-n-2/80 dark:hover:text-n-btnGrey hover:border-n-btnGrey relative inline-flex items-center justify-center rounded-full  h-6   shadow-md px-6 py-6 transition-colors duration-300 ease-in-out ">
             View resume
