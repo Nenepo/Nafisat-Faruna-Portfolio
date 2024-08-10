@@ -40,7 +40,6 @@ gsap.registerPlugin(ScrollTrigger);
       scrollTrigger: {
         trigger: element,
         start: "bottom 90%",
-        markers: true,  // Debugging markers
       },
       y: 0,
       opacity: 1,
