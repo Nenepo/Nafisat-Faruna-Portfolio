@@ -1,36 +1,32 @@
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 import { steps } from '..';
 import { animateProcessText, animateProcessList } from '../gsap/Animations';
+
 function Process() {
+  const processTextRef = useRef(null);
+  const processListRef = useRef(null);
 
   useEffect(() => {
-    const handleLoad = () => {
-      const processText = document.querySelector('.process-text');
-      const processList = document.querySelector('.process-list');
-  
-      animateProcessText(processText);
-      animateProcessList(processList, processText);
-    };
-  
-    if (typeof window !== 'undefined') {
-      window.addEventListener('load', handleLoad);
+    if (processTextRef.current && processListRef.current) {
+      animateProcessText(processTextRef.current);
+      animateProcessList(processListRef.current, processTextRef.current);
     }
-  
-    return () => {
-      window.removeEventListener('load', handleLoad);
-    };
   }, []);
-  
+
   return (
     <div className="mt-10  px-6 lg:px-32">
       <div className="lg:w-[70%] w-[60%] h-[40%] md:h-[60%] mt-28 shadow image relative  z-10 overflow-hidden rounded-3xl mx-auto">
         <img src="/assets/coding-bed.jpg" alt="workspace for now" className="w-full h-full object-cover object-center align-middle" />
       </div>
-      <div className="overflow-hidden  h-30 block">
-        <h1 className="text-n-2 dark:text-n-1  block w-full font-semibold mt-20 text-3xl md:text-4xl text-left md:w-[60%] mb-16 process-text ">My tried-and-true coding process</h1>
+      <div className="overflow-hidden h-30 block">
+        <h1
+          className="text-n-2 dark:text-n-1 block w-full font-semibold mt-20 text-3xl md:text-4xl text-left md:w-[60%] mb-16 process-text"
+          ref={processTextRef}
+        >
+          My tried-and-true coding process
+        </h1>
       </div>
-
-      <div className="grid gap-x-4 gap-y-14 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 process-list">
+      <div className="grid gap-x-4 gap-y-14 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 process-list" ref={processListRef}>
         {steps.map((step, index) => (
           <div key={index}>
             <p className="font-semibold text-n-2 dark:text-n-1 text-sm mb-2">{`(0${index + 1})`}</p>
@@ -40,7 +36,7 @@ function Process() {
         ))}
       </div>
     </div>
-  )
+  );
 }
 
-export default Process
+export default Process;
