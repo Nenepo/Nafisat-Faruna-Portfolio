@@ -18,7 +18,6 @@ const Hero = () => {
         start: "top 20%",
         pin: true,
         pinSpacer: false,
-        // markers: true,
         scrub: true,
       },
       opacity: 0,
@@ -83,9 +82,9 @@ const Hero = () => {
   }, [])
   return (
     <section id="hero" className="container mx-auto w-full relative py-10 px-6 lg:px-32 lg:py-20">
-      <div className="flex flex-col items-center justify-center h-full mt-[20%] container">
+      <div className="flex flex-col items-center justify-center h-full  container">
         {/* fix header animation */}
-        <div className="header-txt" ref={headerTextRef}>
+        <div className="header-txt w-full" ref={headerTextRef}>
           <h1 className=" overflow-hidden flex flex-col -space-y-1.5 items-center justify-center text-5xl font-semibold uppercase z-20 md:text-7xl lg:text-[120px]  text-n-2 dark:text-n-1" >
             <div className="overflow-hidden  h-30 block">
               <span className="tracking-[-4px] block text1">React</span>
@@ -106,7 +105,7 @@ const Hero = () => {
         </div>
         <div
           ref={imageRef}
-          className="lg:w-[512px] w-[45%] h-[60%] md:h-[428px] mt-20 shadow image relative  overflow-hidden rounded-3xl"
+          className="lg:w-[40%] w-[45%] h-[60%]  mt-40 shadow image relative  overflow-hidden rounded-3xl"
         >
           <img
             className="w-full h-full object-cover object-center align-middle"

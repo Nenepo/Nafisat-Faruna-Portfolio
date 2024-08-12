@@ -6,7 +6,7 @@ import { navigation } from "../index";
 import Button from "./Button";
 import TextAnimation from "./TextAnimation";
 import gsap from "gsap";
-
+import { FaCopy } from "react-icons/fa6";
 
 function Header() {
   const { pathname } = useLocation();
@@ -76,7 +76,17 @@ function Header() {
             <div className="bg-n-1/30 w-[100%] h-[1px] mx-auto md:hidden "></div>
             <p className="uppercase  font-[500] text-n-2 dark:text-n-1">Let's Connect</p>
             {/* add an icon */}
-            <Button href="mailto:nafisafaruna@gmail.com" text="nafisafaruna@gmail.com" className={`text-sm text-n-1 dark:text-n-2  bg-n-2 dark:bg-n-1 hover:bg-n-1/60 font-[500]`}></Button>
+            <button className="text-md flex justify-between  transition-colors duration-300 ease-in-out hover:bg-n-btnGrey font-[500] rounded-full space-x-2 bg-n-1 w-auto items-center  shadow-md px-6 py-3">
+          <a
+            href="mailto:nafisafaruna@gmail.com"
+            className={``}
+
+          > Nafisafaruna@gmail.com
+
+          </a>
+          <FaCopy />
+        </button>
+           
           </div>
 
         </div>

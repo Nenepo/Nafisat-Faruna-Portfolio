@@ -45,11 +45,11 @@ function Experience() {
         </div>
         {/* add animation */}
         <div className="flex justify-start mt-14 space-x-2  px-6 lg:px-32">
-          <a href={"/work"}  className="dark:bg-n-1  bg-n-2  text-n-1  dark:text-n-2 px-6 py-6 cursor-pointer relative inline-flex items-center justify-center outline-none font-semibold border-none h-6 rounded-full uppercase hover:text-n-1/70 dark:hover:text-n-2/40  ">View more</a>
+          <a href={"/work"}  className="dark:bg-n-1  bg-n-2  text-n-1  dark:text-n-2 px-6 py-6 cursor-pointer relative inline-flex items-center justify-center outline-none font-semibold border-none h-6 rounded-full uppercase hover:text-n-1/90 dark:hover:text-n-2/90  ">View more</a>
            
       
           {/* links to a google drive resume  */}
-          <a href='#' className=" bg-n-1 dark:bg-n-2 text-n-2 dark:text-n-1 font-semibold border-2 dark:border-n-1/60  outline-none  uppercase hover:text-n-2/80 dark:hover:text-n-btnGrey hover:border-n-btnGrey relative inline-flex items-center justify-center rounded-full  h-6   shadow-md px-6 py-6 transition-colors duration-300 ease-in-out ">
+          <a target="_blank" href='https://docs.google.com/document/d/1FYwRYpMB7NrLP9J2I9kBOz7qZ3Eub3L6lzfstaQbhVU/edit?usp=sharing' className=" bg-n-1 dark:bg-n-2 text-n-2 dark:text-n-1 font-semibold border-2 dark:border-n-1/60  outline-none  uppercase hover:text-n-2/80 dark:hover:text-n-btnGrey hover:border-n-btnGrey relative inline-flex items-center justify-center rounded-full  h-6   shadow-md px-6 py-6 transition-colors duration-300 ease-in-out ">
             View resume
           </a>
         </div>

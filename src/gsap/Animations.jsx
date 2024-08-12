@@ -39,7 +39,7 @@ gsap.registerPlugin(ScrollTrigger);
     gsap.fromTo(element, { opacity: 0, y: 20 }, {
       scrollTrigger: {
         trigger: element,
-        start: "bottom 90%",
+        start: "bottom 80%",
       },
       y: 0,
       opacity: 1,

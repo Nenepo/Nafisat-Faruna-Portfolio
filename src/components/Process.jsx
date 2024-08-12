@@ -15,7 +15,7 @@ function Process() {
 
   return (
     <div className="mt-10  px-6 lg:px-32">
-      <div className="lg:w-[70%] w-[60%] h-[40%] md:h-[60%] mt-28 shadow image relative  z-10 overflow-hidden rounded-3xl mx-auto">
+      <div className="lg:w-[40%] w-[60%] h-[40%] ] mt-28 shadow image relative  z-10 overflow-hidden rounded-3xl mx-auto">
         <img src="/assets/coding-bed.jpg" alt="workspace for now" className="w-full h-full object-cover object-center align-middle" />
       </div>
       <div className="overflow-hidden h-30 block">
