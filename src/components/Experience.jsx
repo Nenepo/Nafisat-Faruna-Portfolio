@@ -1,7 +1,7 @@
 import { experience } from '..';
 import { useEffect, useRef } from 'react';
 import { animateRelevantExperience } from '../gsap/Animations';
-
+import { Link } from 'react-router-dom';
 function Experience() {
   const relevantExperienceRef = useRef(null);
   const relevantTexttRef = useRef(null);
@@ -45,7 +45,7 @@ function Experience() {
         </div>
         {/* add animation */}
         <div className="flex justify-start mt-14 space-x-2  px-6 lg:px-32">
-          <a href={"/work"}  className="dark:bg-n-1  bg-n-2  text-n-1  dark:text-n-2 px-6 py-6 cursor-pointer relative inline-flex items-center justify-center outline-none font-semibold border-none h-6 rounded-full uppercase hover:text-n-1/90 dark:hover:text-n-2/90  ">View more</a>
+          <Link to="/work"  className="dark:bg-n-1  bg-n-2  text-n-1  dark:text-n-2 px-6 py-6 cursor-pointer relative inline-flex items-center justify-center outline-none font-semibold border-none h-6 rounded-full uppercase hover:text-n-1/90 dark:hover:text-n-2/90  ">View projects</Link>
            
       
           {/* links to a google drive resume  */}

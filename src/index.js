@@ -17,33 +17,48 @@ export const navigation = [
 export const steps = [
   {
     id: 1,
-    title: 'Discovery',
-    description: 'Learn about the industry and gather critical information.',
+    title: 'User-Centered Design',
+    description: 'I work with designers to prioritize the user experience by focusing on usability, accessibility, and intuitive navigation, ensuring that the interface is easy to use and meets the needs of the target audience.',
   },
   {
     id: 2,
-    title: 'Strategy',
-    description: 'Map an approach to meet the business\'s design objectives.',
+    title: 'Responsive Design',
+    description: 'I implement responsive design principles to ensure that websites and applications look and function well on all devices, from desktops to mobile phones, providing a seamless experience across different screen sizes.',
   },
   {
     id: 3,
-    title: 'Wireframe',
-    description: 'Create wireframes to align on strategic direction and requirements.',
+    title: 'Component-Based Architecture',
+    description: 'I use component-based frameworks like React to build reusable, modular components. This approach improves code maintainability, scalability, and reduces duplication, making development more efficient.',
   },
   {
     id: 4,
-    title: 'Design',
-    description: 'Explore art direction and animation aligned with your brand.',
+    title: 'Performance Optimization',
+    description: 'I optimize the performance of websites by minimizing load times, reducing HTTP requests, and using efficient coding practices. This includes image optimization, lazy loading, and code splitting to ensure fast and smooth user interactions.',
   },
   {
     id: 5,
-    title: 'Build',
-    description: 'Partner with developers to bring the design to life.',
+    title: 'Cross-Browser Compatibility',
+    description: ' I ensure that applications function consistently across different browsers by testing and applying appropriate CSS and JavaScript fixes, adhering to web standards to avoid browser-specific issues.',
   },
   {
     id: 6,
-    title: 'Deliver',
-    description: 'Compile and deliver the project assets and guidelines on time.',
+    title: 'Version Control and Collaboration',
+    description: ' I use version control systems like Git to manage code changes and collaborate effectively with other developers. This helps in tracking progress, resolving conflicts, and maintaining a clean codebase.',
+  },
+  {
+    id: 7,
+    title: 'Staying Current with Industry Trends',
+    description: '  I continuously learn and adopt new technologies, frameworks, and best practices. This keeps my skill set relevant and allows me to incorporate the latest innovations into my projects.',
+  },
+  {
+    id: 8,
+    title: 'Code Quality and Best Practices',
+    description: ' I write clean, maintainable code by following best practices, such as adhering to coding standards, commenting code when necessary, and using linters and formatters. This ensures that the code is easy to read, understand, and maintain.',
+  },
+  {
+    id: 9,
+    title: 'Collaboration and Communication',
+    description: ' I actively collaborate with designers, back-end developers, and stakeholders to ensure alignment on project goals. Clear communication helps in understanding requirements, addressing concerns early, and delivering a product that meets or exceeds expectations.',
   }
 ];
 
@@ -53,24 +68,19 @@ export const experience = [
     companyTitle: 'PadomzFx',
     position: 'Customer Service Representative',
     date: '(2021 – PRESENT)',
-    workDone: `Managed customer inquiries and provided excellent support, leading to a 20% increase in customer satisfaction.`,
+    workDone: `I handle customer inquiries and deliver exceptional support, resulting in a 20% boost in customer satisfaction. Prioritizing customer satisfaction is a key strength of mine, and I apply this commitment to my technical expertise as well.`,
   },
   {
     companyTitle: 'Essential Tech Solutions',
-    position: 'Front-end Developer',
+    position: 'Front-end Developer Intern',
     date: '(2020 – 2021)',
-    workDone: `Developed and maintained the company’s website and internal tools, improving load times by 30%.`,
+    workDone: `I worked hand in hand with other team members to build a general online marketplace for business owners in Nigeria.`,
   },
+ 
   {
-    companyTitle: 'Freelance',
-    position: 'Web Developer',
-    date: '(2019 – PRESENT)',
-    workDone: `Completed over 50 projects for various clients, focusing on responsive design, performance optimization, and user experience.`,
-  },
-  {
-    companyTitle: 'Personal Project',
-    position: 'Lead Developer',
+    companyTitle: 'Personal Projects',
+    position: 'Lead Front-end Developer',
     date: '(2018 – PRESENT)',
-    workDone: `Designed and developed a personal portfolio website showcasing my projects and skills. Implemented modern web technologies and best practices.`,
+    workDone: `I developed a personal portfolio website showcasing my projects and skills, implementing modern web technologies and best practices.`,
   },
 ];

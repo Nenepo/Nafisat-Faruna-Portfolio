@@ -13,7 +13,7 @@ function Work() {
         </div>
       </div>
       <Footer />
-      <div className="mt-5"><p className="text-n-textGrey  pl-4"> olio portfolio template (midnight) – 2024© </p></div>
+     
     </section>
   )
 }

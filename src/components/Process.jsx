@@ -23,7 +23,7 @@ function Process() {
           className="text-n-2 dark:text-n-1 block w-full font-semibold mt-20 text-3xl md:text-4xl text-left md:w-[60%] mb-16 process-text"
           ref={processTextRef}
         >
-          My tried-and-true coding process
+          My tried-and-true coding strategies
         </h1>
       </div>
       <div className="grid gap-x-4 gap-y-14 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 process-list" ref={processListRef}>
