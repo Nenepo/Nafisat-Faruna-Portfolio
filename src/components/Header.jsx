@@ -1,4 +1,3 @@
-
 import { Link } from 'react-router-dom';
 import { useState } from "react";
 import { useLocation } from "react-router-dom";
@@ -14,8 +13,8 @@ function Header() {
 
   const toggleNavigation = () => {
     setOpenNavigation(prev => !prev);
-    // Slide animations for mobile navigation
 
+    // Slide animations for mobile navigation
     gsap.to('#leftDiv', { x: openNavigation ? 0 : '50%', duration: 0.5, ease: 'power2.inOut' });
     gsap.to('#rightDiv', { x: openNavigation ? 0 : '-70%', duration: 0.5, ease: 'power2.inOut' });
 
@@ -28,8 +27,11 @@ function Header() {
     })
   };
 
-
-
+  const handleLinkClick = () => {
+    setOpenNavigation(false);
+    // Slide "Nafisat Faruna" text back to original position
+    gsap.to('#leftDiv', { x: 0, duration: 0.5, ease: 'power2.inOut' });
+  };
 
   return (
     <header className="fixed  w-full z-20 py-6 backdrop-blur-md lg:px-10">
@@ -40,7 +42,6 @@ function Header() {
             <h3 className="text-lg font-[500] uppercase ">Nafisat Faruna</h3>
           </a>
           <div id="rightDiv" className="cursor-pointer space-y-1 md:hidden" onClick={toggleNavigation}>
-
             <div
               className={` w-4 h-[2px] transition-transform duration-300 bg-n-2 dark:bg-n-1  ${openNavigation ? 'transform rotate-45 translate-y-[2px]' : ''}`}
             />
@@ -55,19 +56,15 @@ function Header() {
             {navigation.map((item, index) => (
               <div className="parent overflow-hidden" key={index}>
                 <Link
-
                   key={item.id}
                   to={item.url}
-                  onClick={() => setOpenNavigation(false)
-
-                  }
+                  onClick={handleLinkClick}
                   className={`line relative uppercase block text-[3rem] font-[500] md:text-lg font-poppins transition-all tracking-tighter border-opacity-0 text-n-2 dark:text-n-1  hover:border-n-2 dark:hover:border-n-1
                 hover:border-b-4 hover:border-opacity-100  ${item.url === pathname.hash ? "" : ""}  `}
                 >
                   {item.title}
                 </Link>
               </div>
-
             ))}
           </nav>
 
@@ -77,18 +74,12 @@ function Header() {
             <p className="uppercase  font-[500] text-n-2 dark:text-n-1">Let's Connect</p>
             {/* add an icon */}
             <button className="text-md flex justify-between  transition-colors duration-300 ease-in-out hover:bg-n-btnGrey font-[500] rounded-full space-x-2 bg-n-1 w-auto items-center  shadow-md px-6 py-3">
-          <a
-            href="mailto:nafisafaruna@gmail.com"
-            className={``}
-
-          > Nafisafaruna@gmail.com
-
-          </a>
-          <FaCopy />
-        </button>
-           
+              <a href="mailto:nafisafaruna@gmail.com" className={``}>
+                Nafisafaruna@gmail.com
+              </a>
+              <FaCopy />
+            </button>
           </div>
-
         </div>
       </div>
     </header>

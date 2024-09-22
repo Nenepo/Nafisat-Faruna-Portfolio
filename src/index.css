@@ -27,7 +27,18 @@ body{
 }
 
 
+body {
+  overflow: hidden; /* This hides both scrollbars */
 
+  /* Allow scrolling */
+  overflow-y: scroll;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+body::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
 .root::-webkit-scrollbar {
  opacity: 0; /* For WebKit browsers (Chrome, Safari) */
 }

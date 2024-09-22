@@ -76,7 +76,13 @@ export const experience = [
     date: '(2020 – 2021)',
     workDone: `I worked hand in hand with other team members to build a general online marketplace for business owners in Nigeria.`,
   },
- 
+  {
+    companyTitle: 'FyreSkin',
+    position: 'Web Administrator',
+    date: '(2022)',
+    workDone: `I was responsible for maintaining the functionality, security, performance, and content of an organization's website, ensuring it runs smoothly and meets all technical and regulatory requirements.`,
+  }
+ ,
   {
     companyTitle: 'Personal Projects',
     position: 'Lead Front-end Developer',
@@ -84,3 +90,28 @@ export const experience = [
     workDone: `I developed a personal portfolio website showcasing my projects and skills, implementing modern web technologies and best practices.`,
   },
 ];
+
+export const work = [
+  {
+    name: null,
+    webImg: null,
+    pageLink: null,
+    thumbnail: '' ,
+    about: '',
+    role: '',
+    timeline: '',
+    location: '',
+    image2: null,
+    challenge: '',
+    image3: null,
+    outcome: '',
+    image4: null,
+    image5: null,
+    image6: null
+  }
+]
+
+
+// when we click on each work we would be redirected to their pages
+
+// we would have a more work this way section with other eork taht is not the present one opened

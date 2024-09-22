@@ -86,9 +86,9 @@ const Hero = () => {
         {/* fix header animation */}
         <div className="header-txt w-full" ref={headerTextRef}>
           <h1 className=" overflow-hidden flex flex-col -space-y-1.5 items-center justify-center text-5xl font-semibold uppercase z-20 md:text-7xl lg:text-[120px]  text-n-2 dark:text-n-1" >
-            <div className="overflow-hidden  h-30 block">
+            {/* <div className="overflow-hidden  h-30 block">
               <span className="tracking-[-4px] block text1">React</span>
-            </div>
+            </div> */}
             <div className="overflow-hidden  h-30  block">
               <span className="tracking-[-4px] block  text2">Front-end</span>
             </div>

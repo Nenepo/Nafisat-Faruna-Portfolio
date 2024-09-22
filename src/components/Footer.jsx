@@ -36,7 +36,7 @@ function Footer() {
         <div className="text-n-1 ">
           {/* github */}
           <div className="flex justify-between">
-            <a className="flex justify-between space-x-2 items-center">
+            <a href="https://www.linkedin.com/in/nafisa-faruna/" className="flex justify-between space-x-2 items-center">
 
               <FaLinkedin />
               <span className="hover:underline transition duration-300 ease-in-out"> Linkedin</span>
