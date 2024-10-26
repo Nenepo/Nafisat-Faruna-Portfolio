@@ -36,7 +36,7 @@ const Hero = () => {
       },
 
       ease: "power1.out",
-      scale: 1.5
+      scale: 1.2
     });
     
     return () => {
@@ -48,10 +48,9 @@ const Hero = () => {
     };
   }, []);
   useEffect(() => {
-    const text1 = headerTextRef.current.querySelector('.text1');
+    // const text1 = headerTextRef.current.querySelector('.text1');
     const text2 = headerTextRef.current.querySelector('.text2');
     const text3 = headerTextRef.current.querySelector('.text3');
-    const smallText1 = headerTextRef.current.querySelector('.sText-1');
     const smallText2 = headerTextRef.current.querySelector('.sText-2');
 
     const textAnimation = gsap.timeline({
@@ -63,19 +62,19 @@ const Hero = () => {
         ease: 'power3.out'
       }
     })
-    textAnimation.from(text1, {
-      y: 100
-    });
+    // textAnimation.from(text1, {
+    //   y: 100
+    // });
     textAnimation.from(text2, { y: 100 }, "-=0.5");
     textAnimation.from(text3, { y: 100 }, "-=0.5");
    
-    gsap.from(smallText1, {
-      x: -100,
-      delay: 1,
-      opacity: 0
-    })
+    // gsap.from(smallText1, {
+    //   x: -100,
+    //   delay: 1,
+    //   opacity: 0
+    // })
     gsap.from(smallText2, {
-      x: 100,
+      // alignContent: center,
       delay: 1,
       opacity: 0
     })
@@ -96,16 +95,13 @@ const Hero = () => {
               <span className="tracking-[-4px] text3 block">Developer&copy;</span>
             </div>
           </h1>
-          <div className=" flex flex-col items-center mt-2 space-y-2 justify-center font-semibold md:items-stretch md:flex-row md:justify-between md:space-x-10 lg:space-x-24  text-n-2 dark:text-n-1">
-            <h5 className="flex text-center uppercase flex-col text-[0.8rem] md:text-left sText-1">
-              Currently crafting <span className="mt-[-8px]"> experiences from my bed 😁</span>
-            </h5>
-            <h5 className="text-[0.8rem] sText-2">{`(2022 - Present)`}</h5>
+          <div className="  flex flex-col items-center mt-2 space-y-2 justify-center font-semibold  text-n-2 dark:text-n-1">
+            <h5 className="flex text-center uppercase flex-col text-[0.8rem] md:text-left sText-2">{`(2022 - Present)`}</h5>
           </div>
         </div>
         <div
           ref={imageRef}
-          className="lg:w-[40%] w-[45%] h-[60%]  mt-40 shadow image relative  overflow-hidden rounded-3xl"
+          className="lg:w-[30%] w-[45%] h-[60%]  mt-40 shadow image relative  overflow-hidden rounded-3xl"
         >
           <img
             className="w-full h-full object-cover object-center align-middle"

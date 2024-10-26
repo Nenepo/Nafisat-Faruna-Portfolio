@@ -5,12 +5,14 @@ import Process from "./Process";
 import About from "./About";
 
 import Experience from "./Experience";
+import WorkSection from "./WorkSection";
 
 function Section() {
   return (
     <section className="w-full mt-20 relative">
 
       <About />
+      <WorkSection/>
       <Process />
       <Experience />
       {/* reduce the line height */}

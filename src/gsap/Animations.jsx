@@ -94,8 +94,8 @@ gsap.registerPlugin(ScrollTrigger);
     const timeline = gsap.timeline({
       scrollTrigger: {
         trigger: triggerElement,
-        start: "top 60%",
-        end: "bottom top",
+        start: "bottom 60%",
+        // end: "bottom top",
         scrub: true,
       },
     });
