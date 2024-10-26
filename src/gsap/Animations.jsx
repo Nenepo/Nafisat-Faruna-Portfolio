@@ -5,12 +5,14 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 
 gsap.registerPlugin(ScrollTrigger);
+
+
   export const animateAboutText1 = (element) => {
     gsap.fromTo(element, { opacity: 0, y: 20 }, {
       scrollTrigger: {
         trigger: element,
         start: "top 80%",
-        // end: "top 60%",
+        end: "top 10%",
         scrub: true,
       },
       opacity: 1,
@@ -24,7 +26,7 @@ gsap.registerPlugin(ScrollTrigger);
       scrollTrigger: {
         trigger: element1,
         start: "top 80%",
-        // end: "top 60%",
+        end: "top 60%",
         scrub: true,
         onEnter: () => gsap.to(element2, { opacity: 0, y: -20, duration: 1, ease: "power1.out" }),
         onEnterBack: () => gsap.to(element2, { opacity: 1, y: 0, duration: 1, ease: "power1.in" }),
