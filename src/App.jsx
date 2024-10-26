@@ -38,7 +38,7 @@ function App() {
         <button
           ref={buttonRef}
           onClick={() => setDarkMode(!darkMode)}
-          className="fixed bottom-4 right-4 "
+          className="fixed bottom-4 right-4 z-50"
         >
            {darkMode ? (
             <img className="w-6 h-6" src="/assets/light1.png" alt="Light mode icon" />
