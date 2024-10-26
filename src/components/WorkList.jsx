@@ -30,7 +30,7 @@ function WorkList({ className, title, description, link, techUsed = [], img, git
       <div className="mt-4 lg:mt-0 lg:flex lg:flex-col  lg:justify-center lg:w-[50%]">
         <h2 className="text-xl md:text-2xl font-semibold text-gray-900 dark:text-white">{title}</h2>
         <p className=" text-base text-gray-600 dark:text-gray-500">{description}</p>
-        <p className="text-gray-800 text-justify mt-2 justify-center dark:text-gray-300">{text}</p>
+        <p className="text-gray-800  mt-2 justify-center dark:text-gray-300">{text}</p>
 
         <div className="flex mt-4 space-x-4">
           <a
