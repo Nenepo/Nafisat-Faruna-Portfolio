@@ -2,6 +2,7 @@ import { useRef, useEffect } from 'react';
 import gsap from 'gsap';
 import Footer from '../components/Footer';
 import WorkList from '../components/WorkList';
+import WorkSection from '../components/WorkSection';
 
 function Work() {
   const selectedRef = useRef(null);
@@ -40,10 +41,8 @@ function Work() {
           </div>
         </h1>
 
-        {/* each work will be linked */}
-        <div>
-          <WorkList />
-        </div>
+       
+        <WorkSection/>
       </div>
       <Footer />
     </section>

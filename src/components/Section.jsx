@@ -12,7 +12,7 @@ function Section() {
     <section className="w-full mt-20 relative">
 
       <About />
-      <WorkSection/>
+      <WorkSection home/>
       <Process />
       <Experience />
       {/* reduce the line height */}
