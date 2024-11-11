@@ -65,10 +65,10 @@ export const steps = [
 export const experience = [
   {
 
-    companyTitle: 'PadomzFx',
-    position: 'Customer Service Representative',
+    companyTitle: 'PadomzFx Academy',
+    position: 'Frontend Development Lead',
     date: '(2021 – PRESENT)',
-    workDone: `I handle customer inquiries and deliver exceptional support, resulting in a 20% boost in customer satisfaction. Prioritizing customer satisfaction is a key strength of mine, and I apply this commitment to my technical expertise as well.`,
+    workDone: `Lead the frontend development team to build responsive and user-centric web applications. Enhanced user satisfaction by prioritizing seamless user experiences and ensuring alignment with modern design principles. Achieved a 20% improvement in user engagement by applying both customer-focused strategies and technical expertise to create a supportive and efficient user interface.`,
   },
   {
     companyTitle: 'Essential Tech Solutions',
@@ -91,25 +91,25 @@ export const experience = [
   },
 ];
 
-export const work = [
-  {
-    name: null,
-    webImg: null,
-    pageLink: null,
-    thumbnail: '' ,
-    about: '',
-    role: '',
-    timeline: '',
-    location: '',
-    image2: null,
-    challenge: '',
-    image3: null,
-    outcome: '',
-    image4: null,
-    image5: null,
-    image6: null
-  }
-]
+// export const work = [
+//   {
+//     name: null,
+//     webImg: null,
+//     pageLink: null,
+//     thumbnail: '' ,
+//     about: '',
+//     role: '',
+//     timeline: '',
+//     location: '',
+//     image2: null,
+//     challenge: '',
+//     image3: null,
+//     outcome: '',
+//     image4: null,
+//     image5: null,
+//     image6: null
+//   }
+// ]
 
 
 // when we click on each work we would be redirected to their pages

@@ -50,7 +50,7 @@ function WorkSection({ home }) {
               onClick={handlePrev}
               className="absolute left-2 lg:left-[62px] top-1/2 transform -translate-y-1/2 z-10 bg-[grey]/10 dark:text-white  text-black w-8 h-8 rounded-full"
             >
-              <span> {`<`}</span>
+              <span className='text-lg'> {`<`}</span>
             
             </button>
           )}
@@ -59,7 +59,7 @@ function WorkSection({ home }) {
               onClick={handleNext}
               className="absolute right-2 lg:right-[62px] top-1/2 transform -translate-y-1/2 z-10 bg-[grey]/10 dark:text-white  text-black w-8 h-8  rounded-full"
             >
-              <span> {`>`}</span>
+              <span className='text-lg'> {`>`}</span>
             </button>
           )}
         </>

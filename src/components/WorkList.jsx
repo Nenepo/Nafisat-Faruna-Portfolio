@@ -33,14 +33,14 @@ function WorkList({ className, title, description, link, techUsed = [], img, git
         <p className="text-gray-800  mt-2 justify-center dark:text-gray-300">{text}</p>
 
         <div className="flex mt-4 space-x-4">
-          <a
+         {link && <a
             href={link}
             target="_blank"
             rel="noopener noreferrer"
             className="text-sm text-blue-500 hover:text-blue-600 transition"
           >
             Visit Project
-          </a>
+          </a>}
           {githubRepo && <a
             href={githubRepo}
             target="_blank"
