@@ -27,7 +27,7 @@ function App() {
   }, [darkMode]);
   return (
     <>
-      <section className={`${darkMode ? 'bg-n-2' : 'bg-n-1'}  font-inter main `} >
+      <section className={`${darkMode ? 'bg-n-2' : 'bg-n-1'} w-full font-inter main overflow-x-hidden`} >
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />
