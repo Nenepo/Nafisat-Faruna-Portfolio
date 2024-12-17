@@ -1,7 +1,6 @@
 import { useRef, useEffect } from 'react';
 import gsap from 'gsap';
 import Footer from '../components/Footer';
-import WorkList from '../components/WorkList';
 import WorkSection from '../components/WorkSection';
 
 function Work() {

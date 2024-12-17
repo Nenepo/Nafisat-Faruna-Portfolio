@@ -22,12 +22,12 @@ function WorkList({ className, title, description, link, techUsed = [], img, git
   return (
     <div
       ref={(el) => (workRefs.current[index] = el)}
-      className={`${className} p-6 w-full h-full lg:h-[70vh]  bg-gray-100 dark:bg-[grey]/10 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 gap-6 lg:flex`}
+      className={`${className} p-6 w-full h-full   bg-gray-100 dark:bg-[grey]/10 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 `}
     >
-      <div className="relative overflow-hidden rounded-md lg:w-[50%] lg:h-full" >
+      <div className="relative overflow-hidden rounded-md lg:h-full" >
         <img src={img} alt={title} className="w-full h-full object-cover lg:object-contain" />
       </div>
-      <div className="mt-4 lg:mt-0 lg:flex lg:flex-col  lg:justify-center lg:w-[50%]">
+      <div className="mt-4 ">
         <h2 className="text-xl md:text-2xl font-semibold text-gray-900 dark:text-white">{title}</h2>
         <p className=" text-base text-gray-600 dark:text-gray-500">{description}</p>
         <p className="text-gray-800  mt-2 justify-center dark:text-gray-300">{text}</p>
