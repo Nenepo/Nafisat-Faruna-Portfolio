@@ -13,6 +13,11 @@ function WorkSection({ home }) {
       swiperRef.current = new Swiper('.swiper-container', {
         direction: 'horizontal',
         slidesPerView: 1,
+        breakpoints: {
+          1024: {
+            slidesPerView: 3, // Display 3 slides on larger screens
+          },
+        },
         on: {
           slideChange: function () {
             setCurrentIndex(this.activeIndex);
@@ -35,7 +40,7 @@ function WorkSection({ home }) {
   };
 
   return (
-    <section className="py-20 swiper-container relative">
+    <section className="py-20 swiper-container relative mt-[200px]" >
       {home && (
         <h1 className="text-n-2 text-center dark:text-n-1 text-5xl font-semibold uppercase md:text-6xl tracking-[-4px] leading-tight">
           Work Section
@@ -48,7 +53,7 @@ function WorkSection({ home }) {
           {currentIndex > 0 && (
             <button
               onClick={handlePrev}
-              className="absolute left-2 lg:left-[62px] top-1/2 transform -translate-y-1/2 z-10 bg-[grey]/10 dark:text-white  text-black w-8 h-8 rounded-full"
+              className="absolute top-[20%] left-2 lg:left-[62px] flex justify-center items-center z-10 bg-[grey] dark:text-black  text-white w-8 h-8 rounded-full"
             >
               <span className='text-lg'> {`<`}</span>
             
@@ -57,7 +62,7 @@ function WorkSection({ home }) {
           {currentIndex < works.length - 1 && (
             <button
               onClick={handleNext}
-              className="absolute right-2 lg:right-[62px] top-1/2 transform -translate-y-1/2 z-10 bg-[grey]/10 dark:text-white  text-black w-8 h-8  rounded-full"
+              className="absolute right-2 top-[20%] lg:right-[62px] flex justify-center items-center  z-10 bg-[grey] dark:text-black  text-white w-8 h-8  rounded-full"
             >
               <span className='text-lg'> {`>`}</span>
             </button>
@@ -66,9 +71,9 @@ function WorkSection({ home }) {
       )}
 
       {/* Swiper Wrapper */}
-      <div className="swiper-wrapper">
+      <div className="swiper-wrapper ">
         {works.map((work, index) => (
-          <div className="swiper-slide py-10 px-6 lg:px-32" key={work.id}>
+          <div className="swiper-slide py-10 px-6 " key={work.id}>
             <WorkList
               index={index}
               title={work.title}
@@ -83,8 +88,6 @@ function WorkSection({ home }) {
         ))}
       </div>
 
-      {/* Pagination Dots */}
-      <div className="swiper-pagination"></div>
     </section>
   );
 }
