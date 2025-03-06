@@ -9,7 +9,7 @@ import WorkSection from "./WorkSection";
 
 function Section() {
   return (
-    <section className="w-full mt-20 relative">
+    <section className="w-full mt-20 relative lg:px-10 md:px-5">
 
       <About />
       <WorkSection home/>
