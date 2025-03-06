@@ -38,9 +38,9 @@ function Header() {
       <div className="md:px-5 md:items-center md:flex md:justify-between">
         {/* transition x open navigation = true */}
         <div id="mobile-nav" className="flex justify-between items-center px-5">
-          <a id="leftDiv" href="#hero" className="md:translate-x-[-10%] md:mt[-4%] text-n-2 dark:text-n-1" >
+          <Link id="leftDiv" to="#" className="md:translate-x-[-10%] md:mt[-4%] text-n-2 dark:text-n-1" >
             <h3 className="text-lg font-[500] uppercase ">Nafisat Faruna</h3>
-          </a>
+          </Link>
           <div id="rightDiv" className="cursor-pointer space-y-1 md:hidden" onClick={toggleNavigation}>
             <div
               className={` w-4 h-[2px] transition-transform duration-300 bg-n-2 dark:bg-n-1  ${openNavigation ? 'transform rotate-45 translate-y-[2px]' : ''}`}
