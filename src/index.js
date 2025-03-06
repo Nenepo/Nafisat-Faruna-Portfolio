@@ -1,15 +1,15 @@
 export const navigation = [
   
-  {
-    id: "0",
-    title: "About",
-    url: "/",
-  },
-  {
-    id: "1",
-    title: "Work",
-    url: "/work",
-  },
+  // {
+  //   id: "0",
+  //   title: "About",
+  //   url: "/",
+  // },
+  // {
+  //   id: "1",
+  //   title: "Work",
+  //   url: "/work",
+  // },
   
  
 ];
