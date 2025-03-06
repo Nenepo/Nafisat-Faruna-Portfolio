@@ -67,3 +67,4 @@ function WorkList({ className, title, description, link, techUsed = [], img, git
 }
 
 export default WorkList;
+ 

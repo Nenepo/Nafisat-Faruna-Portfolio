@@ -44,7 +44,11 @@ export const works = [
     description: 'A company dedicated to help app developers ship their apps on google playstore',
     text: 'The Android App Testers website was created to connect app developers with skilled testers who ensure their applications are bug-free and optimized before launch. The platform showcases the company’s mission to support developers in delivering polished apps by providing user feedback, identifying issues, and improving overall app quality. The site is designed with responsive features, a smooth scrolling experience, and Firebase integration for dynamic content management.',
     link: 'https://androidapptesters.web.app/',
+<<<<<<< HEAD
     techUsed: ['React', 'TailwindCss','React-scroll', 'firebase hosting', "firebase database" ],
+=======
+    techUsed: ['React', 'TailwindCss','React-scroll', 'firebase'],
+>>>>>>> 654f5aafff97f31d5fd8868a0be250c0911e6c07
   },
  
 ];
