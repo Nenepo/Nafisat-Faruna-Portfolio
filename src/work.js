@@ -14,7 +14,7 @@ export const works = [
     title: 'The Cosmetic Calculator',
     img: '/projectImages/calculator.png', 
     description: 'A tool designed to assist users in accurately measuring and formulating their own cosmetic products, ensuring precision and consistency',
-    text: 'The Cosmetic Calculator is an intuitive tool built to guide users through the process of creating their own cosmetic formulations. This multi-step calculator allows users to input desired product types, ingredients, and quantities, providing precise measurements to achieve the ideal formulation. It supports users in balancing ingredients like oils, waxes, and fragrances to create customized products such as creams, serums, and lotions. With real-time calculations, visual feedback, and a responsive design, the Cosmetic Calculator ensures a seamless and accurate formulation experience across all devices.',
+    text: 'The Cosmetic Calculator is an intuitive tool built to guide users through the process of creating their own cosmetic formulations. This multi-step calculator allows users to input desired product types, ingredients, and quantities, providing precise measurements to achieve the ideal formulation. The Cosmetic Calculator ensures a seamless and accurate formulation experience across all devices.',
     link: 'https://nenepo.github.io/cosmetic-calculator/',
     techUsed: ['HTML', 'CSS', 'Javascript' ],
     githubRepo: 'https://github.com/Nenepo/cosmetic-calculator'

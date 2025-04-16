@@ -1,8 +1,9 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from "react";
 import { works } from "../work";
 import WorkList from "./WorkList";
-import Swiper from 'swiper/bundle';
-import 'swiper/css/bundle';
+import Swiper from "swiper/bundle";
+import "swiper/css/bundle";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 function WorkSection({ home }) {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -10,8 +11,8 @@ function WorkSection({ home }) {
 
   useEffect(() => {
     if (works.length > 1) {
-      swiperRef.current = new Swiper('.swiper-container', {
-        direction: 'horizontal',
+      swiperRef.current = new Swiper(".swiper-container", {
+        direction: "horizontal",
         slidesPerView: 1,
         breakpoints: {
           1024: {
@@ -40,7 +41,7 @@ function WorkSection({ home }) {
   };
 
   return (
-    <section className="py-20 swiper-container relative mt-[200px]" >
+    <section className="py-20 swiper-container relative mt-[200px]">
       {home && (
         <h1 className="text-n-2 text-center dark:text-n-1 text-5xl font-semibold uppercase md:text-6xl tracking-[-4px] leading-tight">
           Work Section
@@ -53,18 +54,17 @@ function WorkSection({ home }) {
           {currentIndex > 0 && (
             <button
               onClick={handlePrev}
-              className="absolute top-[20%] left-2 lg:left-[62px] flex justify-center items-center z-10 bg-[grey] dark:text-black  text-white w-8 h-8 rounded-full"
+              className="absolute top-[50%] left-2 lg:left-[62px] flex justify-center items-center z-10 bg-black dark:bg-white  dark:text-black  text-white w-8 h-8 rounded-full"
             >
-              <span className='text-lg'> {`<`}</span>
-            
+              <ChevronLeft />
             </button>
           )}
-          {currentIndex < works.length - 1 && (
+          {currentIndex < works.length - 1   && (
             <button
               onClick={handleNext}
-              className="absolute right-2 top-[20%] lg:right-[62px] flex justify-center items-center  z-10 bg-[grey] dark:text-black  text-white w-8 h-8  rounded-full"
+              className="absolute right-2 top-[50%] lg:right-[62px] flex justify-center items-center  z-10 bg-black dark:bg-white  dark:text-black text-white w-8 h-8  rounded-full"
             >
-              <span className='text-lg'> {`>`}</span>
+              <ChevronRight />
             </button>
           )}
         </>
@@ -87,7 +87,6 @@ function WorkSection({ home }) {
           </div>
         ))}
       </div>
-
     </section>
   );
 }
