@@ -1,6 +1,16 @@
 export const works = [
   {
     id: 1,
+    title: 'Fantum',
+    img: '/projectImages/fantum.png', 
+    description: 'Fantum makes Audio marketing easier with customizable smart links and powerful analytics to help you reach your fans.',
+    text: "Fantum is a platform that simplifies audio marketing by offering customizable smart links and advanced analytics, enabling creators to effectively reach and grow their audience. I worked on the Fantum web app with a focus on creating a seamless and responsive user experience. My contributions included building key frontend components using Next.js, TailwindCSS, and Typescript, as well as enhancing mobile compatibility through Expo and Tamagui UI. I ensured that the platform's interface was both visually engaging and performant, supporting Fantum’s mission to empower audio creators with powerful marketing tools.",
+    link: 'https://app.fantum.me/',
+    techUsed: ['Expo', 'TailwindCss', 'Typescript', 'Tamag ui', "Next js"],
+    // githubRepo: 'https://github.com/user/photoruum-join-form'
+  },
+  {
+    id: 2,
     title: 'The Photoruum Join Form',
     img: '/projectImages/photoruum1.png', 
     description: 'A community dedicated to promoting and celebrating photographers in Africa.',
@@ -10,7 +20,7 @@ export const works = [
     // githubRepo: 'https://github.com/user/photoruum-join-form'
   },
   {
-    id: 2,
+    id: 3,
     title: 'The Cosmetic Calculator',
     img: '/projectImages/calculator.png', 
     description: 'A tool designed to assist users in accurately measuring and formulating their own cosmetic products, ensuring precision and consistency',
@@ -20,25 +30,25 @@ export const works = [
     githubRepo: 'https://github.com/Nenepo/cosmetic-calculator'
   },
   {
-    id: 3,
+    id: 5,
     title: 'Bento grid',
     img: '/projectImages/bento.png', 
     description: 'A visually engaging grid layout inspired by the Japanese bento box, designed to organize and display content in a structured, compact format.',
     text: 'The Bento Grid is a responsive, CSS-based grid layout that arranges content in a visually appealing and organized manner, inspired by the structured compartments of a bento box. It’s ideal for showcasing items like images, product features, or articles, providing a clean, modern aesthetic. The grid adapts fluidly to various screen sizes, ensuring content is well-organized and accessible across devices. Users can customize grid items to highlight different elements, making it an excellent solution for portfolios, galleries, and e-commerce layouts.',
     techUsed: ['css grid', 'HTML' ],
   },
+  // {
+  //   id: 5,
+  //   title: 'The Stucruum Landing Page',
+  //   img: '/projectImages/stucruum.png', 
+  //   description: 'A community dedicated to promoting and celebrating photographers in Africa.',
+  //   text: 'The Stucruum is a solution for Afro stock images',
+  //   link: 'https://www.stucruum.com',
+  //   techUsed: ['React', 'TailwindCss','GSAP'],
+  //   // githubRepo: 'https://github.com/user/photoruum-join-form'
+  // },
   {
     id: 4,
-    title: 'The Stucruum Landing Page',
-    img: '/projectImages/stucruum.png', 
-    description: 'A community dedicated to promoting and celebrating photographers in Africa.',
-    text: 'The Stucruum is a solution for Afro stock images',
-    link: 'https://www.stucruum.com',
-    techUsed: ['React', 'TailwindCss','GSAP'],
-    // githubRepo: 'https://github.com/user/photoruum-join-form'
-  },
-  {
-    id: 5,
     title: 'Android app testers',
     img: '/projectImages/appTesters.png', 
     description: 'A company dedicated to help app developers ship their apps on google playstore',
