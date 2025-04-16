@@ -67,21 +67,21 @@ export const experience = [
 
     companyTitle: 'ActiveEdge Technologies',
     position: 'Frontend Developer',
-    date: '(MARCH 2025 – PRESENT)',
+    date: '(MARCH 2025 )',
     workDone: `Working on the company’s onboarding platform, focusing on fixing UI issues, improving responsiveness, and ensuring a smoother user experience. Collaborated with team members to maintain consistency across the frontend and began learning Laravel to better understand the backend structure and enhance integration.`,
   },
   {
 
     companyTitle: 'Fantum',
     position: 'Frontend Developer',
-    date: '(MARCH 2025 – PRESENT)',
+    date: '(MARCH 2025 )',
     workDone: `Contributed to the development of Fantum’s marketing website by building responsive and visually appealing interfaces using Next.js, Tailwind CSS, Tamagui UI, and TypeScript. Worked with cross-functional teams to ensure seamless user interactions across devices, helping the brand deliver its value proposition clearly. Focused on clean design implementation and performance optimization to support growth and user engagement.`,
   },
   {
 
     companyTitle: 'PadomzFx Academy',
     position: 'Frontend Development Lead',
-    date: '(2021 – PRESENT)',
+    date: '(2021 – 2024)',
     workDone: `Lead the frontend development team to build responsive and user-centric web applications. Enhanced user satisfaction by prioritizing seamless user experiences and ensuring alignment with modern design principles. Achieved a 20% improvement in user engagement by applying both customer-focused strategies and technical expertise to create a supportive and efficient user interface.`,
   },
   {
