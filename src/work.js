@@ -11,6 +11,16 @@ export const works = [
   },
   {
     id: 2,
+    title: 'The Connecting Bridge',
+    img: '/projectImages/tcb.png', 
+    description: 'A community dedicated to promoting brand visibility and connecting brands with their target audience through innovative marketing strategies.',
+    text: 'The Connecting Bridge is a marketing agency focused on enhancing brand visibility and connecting brands with their target audience. I developed the TCB website to showcase the agency’s services, portfolio, and client testimonials. The site features a modern design with smooth scrolling, responsive layouts, and interactive elements to engage visitors. I utilized React and Tailwind CSS to create a visually appealing and user-friendly experience, ensuring that the website effectively communicates TCB’s mission and offerings.',
+    link: 'https://theconnectingbridge.ng/',
+    techUsed: ['React', 'TailwindCss', 'Typescript', 'Framer-motion', 'Youtube'],
+    // githubRepo: 'https://github.com/user/photoruum-join-form'
+  },
+  {
+    id: 2,
     title: 'The Photoruum Join Form',
     img: '/projectImages/photoruum1.png', 
     description: 'A community dedicated to promoting and celebrating photographers in Africa.',

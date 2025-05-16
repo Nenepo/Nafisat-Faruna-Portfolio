@@ -22,7 +22,7 @@ function WorkList({ className, title, description, link, techUsed = [], img, git
   return (
     <div
       ref={(el) => (workRefs.current[index] = el)}
-      className={`${className} p-6 w-full h-[650px]   bg-gray-100 dark:bg-[grey]/10 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 `}
+      className={`${className} p-6 w-full h-[750px]   bg-gray-100 dark:bg-[grey]/10 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 `}
     >
       <div className="relative overflow-hidden rounded-md max-h-[200px] lg:max-h-[150px] " >
         <img src={img} alt={title} className="w-full h-full object-cover lg:object-contain" />
